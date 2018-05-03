@@ -1,0 +1,136 @@
+//--------Standard scale variables---------//
+//-------------DO NOT CHANGE---------------//
+
+$min-2nd: 1.067;
+$maj-2nd: 1.125;
+$min-3rd: 1.200;
+$maj-3rd: 1.250;
+$per-4th: 1.333;
+$aug-4th: 1.414;
+$per-5th: 1.500;
+$gld-rat: 1.618;
+
+//-----------------------------------------//
+
+
+// BASE FONT ASSIGNED VARIABLES
+
+$base-font-family:      'Open Sans', sans-serif;
+
+$mobile-base-size:      1.125rem;
+$desktop-base-size:     1.25rem;
+
+$mobile-line-height:    $per-5th;
+$desktop-line-height:   $per-5th;
+
+$base-margin-top:       0;
+$base-margin-btm:       1em;
+
+
+// ASSIGNED HEADING VARIABLES
+
+$heading-font-family:   $base-font-family;
+
+$desktop-scale:         $aug-4th; 
+$desktop-display-scale: $gld-rat;
+$mobile-scale:          $per-4th;
+$mobile-display-scale:  $aug-4th;
+
+$mobile-h-line-height:  1em;
+$desktop-h-line-height: 1em;
+
+$heading-margin-top:    1em;
+$heading-margin-btm:    .5em;
+
+$heading-weight:        300;
+$heading-transform:     inherit;
+
+$sm-heading-weight:     700;
+$sm-heading-transform:  uppercase;
+
+$display-weight:        300;
+$display-transform:     inherit;
+
+
+// CALCULATIONS
+
+$desktop-h6:    1rem / $desktop-scale;
+$desktop-h5:    1rem;
+$desktop-h4:    1rem * $desktop-scale;
+$desktop-h3:    $desktop-h4 * $desktop-scale;
+$desktop-h2:    $desktop-h3 * $desktop-scale;
+$desktop-h1:    $desktop-h2 * $desktop-scale;
+
+$desktop-d4:    1rem * $desktop-display-scale;
+$desktop-d3:    $desktop-d4 * $desktop-display-scale;
+$desktop-d2:    $desktop-d3 * $desktop-display-scale;
+$desktop-d1:    $desktop-d2 * $desktop-display-scale;
+
+$mobile-h6:     1rem / $mobile-scale;
+$mobile-h5:     1rem;
+$mobile-h4:     1rem * $mobile-scale;
+$mobile-h3:     $mobile-h4 * $mobile-scale;
+$mobile-h2:     $mobile-h3 * $mobile-scale;
+$mobile-h1:     $mobile-h2 * $mobile-scale;
+
+$mobile-d4:     1rem * $mobile-display-scale;
+$mobile-d3:     $mobile-d4 * $mobile-display-scale;
+$mobile-d2:     $mobile-d3 * $mobile-display-scale;
+$mobile-d1:     $mobile-d2 * $mobile-display-scale;
+
+
+// MOBILE STYLE ASSIGNMENTS
+
+html        {font-size: $mobile-base-size;}
+
+body        {line-height: $mobile-line-height; font-family: $base-font-family;}
+
+p           {max-width: 40em; margin: $base-margin-top 0 $base-margin-btm;}
+
+.small      {font-size: 1rem / $mobile-scale;}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+            line-height: $mobile-h-line-height;
+            margin: $heading-margin-top 0 $heading-margin-btm;
+}
+
+h1, .h1     {font-size: $mobile-h1; font-weight: $heading-weight; text-transform: $heading-transform; }
+h2, .h2     {font-size: $mobile-h2; font-weight: $heading-weight; text-transform: $heading-transform;}
+h3, .h3     {font-size: $mobile-h3; font-weight: $heading-weight; text-transform: $heading-transform;}
+h4, .h4     {font-size: $mobile-h4; font-weight: $heading-weight; text-transform: $heading-transform;}
+h5, .h5     {font-size: $mobile-h5; font-weight: $sm-heading-weight; text-transform: $sm-heading-transform;}
+h6, .h6     {font-size: $mobile-h6; font-weight: $sm-heading-weight; text-transform: $sm-heading-transform;}
+
+.display-1  {font-size: $mobile-d1; font-weight: $display-weight; text-transform: $display-transform;}
+.display-2  {font-size: $mobile-d2; font-weight: $display-weight; text-transform: $display-transform;}
+.display-3  {font-size: $mobile-d3; font-weight: $display-weight; text-transform: $display-transform;}
+.display-4  {font-size: $mobile-d4; font-weight: $display-weight; text-transform: $display-transform;}
+
+// TABLET+ STYLE ASSIGNMENTS
+
+@media (min-width: 768px) {
+    
+html        {font-size: $desktop-base-size; line-height: $desktop-line-height;}
+
+h1, .h1     {font-size: $desktop-h1;}
+h2, .h2     {font-size: $desktop-h2;}
+h3, .h3     {font-size: $desktop-h3;}
+h4, .h4     {font-size: $desktop-h4;}
+h5, .h5     {font-size: $desktop-h5;}
+h6, .h6     {font-size: $desktop-h6;}
+
+.display-1  {font-size: $desktop-d1;}
+.display-2  {font-size: $desktop-d2;}
+.display-3  {font-size: $desktop-d3;}
+.display-4  {font-size: $desktop-d4;}
+    
+}
